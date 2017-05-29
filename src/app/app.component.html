@@ -1,0 +1,25 @@
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-md-8">
+      <input id="inputName" [(ngModel)]="inputName" (ngModelChange)="FilterByName()">
+      <input type="button" (click)="FilterByName()" value="Search"/>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <div class="col-md-2 h4">License#</div>
+      <div class="col-md-2 h4">Last Name</div>
+      <div class="col-md-2 h4">First Name</div>
+      <div class="col-md-2 h4">State</div>
+    </div>
+  </div>
+  <div class="row">
+
+      <div class="col-md-8" *ngFor="let x of filteredItems">
+        <div class="col-md-2" *ngFor="let y of x">{{ y }}</div>
+      </div>
+
+  </div>
